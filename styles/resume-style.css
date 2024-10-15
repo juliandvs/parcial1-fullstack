@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(0, 92, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resume-container{
+    background-color: lightgrey;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+.name-container{
+    display: flex;
+    justify-content: center;
+}
+.identification-container{
+    display: flex;
+    justify-content: center;
+}
+p{
+    margin: 0;
+    font-family: Arial;
+    font-size: 15px;
+}
+.name-worker, .lastName-worker,
+.identification-worker, .identification-number-worker{
+    display: inline-block;
+    margin-right: 5px;
+}
+img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+    margin: 25px 100px;
+}
+.profile-worker{
+    word-wrap: break-word; /*Permite saltos de línea para palabras largas*/
+    white-space: pre-wrap; /* Mantiene saltos de línea y espacios*/
+    overflow: hidden; /*Evita que el contenido se salga del contenedor*/
+    width: 100%; /*Asegura que el texto no exceda el ancho del contenedor*/
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index-style.css">
+    <title>Hoja de Vida</title>
+</head>
+<body>
+    <form class="container">
+        <p class="title">Creación de Hoja de Vida</p>
+        <div class="subcontainer">
+            <div class="data-input">
+                <p class="info">Nombres</p>
+                <input class="name-input" type="text">
+            </div>           
+            <div class="data-input">
+                <p class="info">Apellidos</p>
+                <input class="lastname-input" type="text">
+            </div>           
+            <div class="data-input">
+                <p class="info">Email</p>
+                <input class="email-input" type="text">
+            </div>
+            <div class="data-input">
+                <p class="info">Numero de Contacto</p>
+                <input class="phone-input" type="number">
+            </div>
+            <div class="data-input">
+                <p class="info">Tipo de Documento</p>
+                <select class="selector">
+                    <option disabled selected>Seleccione una opción</option>
+                    <option>Cédula de Ciudadania</option>
+                    <option>Tarjeta de Identidad</option>
+                    <option>Cédula de Extrangeria</option>
+                </select>
+            </div>
+            <div class="data-input">
+                <p class="info">Número</p>
+                <input class="number-input" type="number">
+            </div>
+            <div class="subcontainer2">
+                <p class="info">Perfil Profesional</p>
+                <textarea class="profile-input"></textarea>
+            </div>
+        </div>
+            <button type="submit" class="createhv-btn">Crear Hoja de Vida</button>
+    </form>
+    <script>
+        
+        /*If we used an id, the form to select the input changes
+            it would be : document.getElementById*/
+
+        
+        const form = document.querySelector('.container');
+        const name = document.querySelector('.name-input');
+        const last_name = document.querySelector('.lastname-input');
+        const email = document.querySelector('.email-input');
+        const phone = document.querySelector('.phone-input');
+        const id_number = document.querySelector('.number-input');
+        const profile_description = document.querySelector('.profile-input');
+        
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const nameValue = name.value;
+            const lastnameValue = last_name.value;
+            const emailValue = email.value;
+            const phoneValue = phone.value;
+            const idNumberValue = id_number.value;
+            const descriptionValue = profile_description.value;
+
+
+            localStorage.setItem('Name', nameValue); 
+            localStorage.setItem('Last Name', lastnameValue); 
+            localStorage.setItem('Email', emailValue); 
+            localStorage.setItem('Phone Number', phoneValue); 
+            localStorage.setItem('Id Number', idNumberValue); 
+            localStorage.setItem('Description', descriptionValue); 
+
+            window.location.href = "resume.html";
+        });
+    </script>
+</body>
+</html>

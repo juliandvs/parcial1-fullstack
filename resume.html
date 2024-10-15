@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/resume-style.css">
+    <title>Resume</title>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="name-container">
+            <p class="name-worker"></p>
+            <p class="lastName-worker"></p>
+        </div>
+        <img src="/imgs/img.jpg">
+        <p class="email-worker"></p>
+        <p class="phoneNumber-worker"></p>
+        <div class="identification-container">
+            <p class="identification-worker">Id</p>
+            <p class="identification-number-worker"></p>
+        </div>
+        <p class="profile-worker"></p>
+    </div>
+    <script>
+        const name = localStorage.getItem('Name');
+        const lastName = localStorage.getItem('Last Name');
+        const email = localStorage.getItem('Email');
+        const phoneNumber = localStorage.getItem('Phone Number');
+        const idNumber = localStorage.getItem('Id Number');
+        const profile = localStorage.getItem('Description');
+
+
+        document.querySelector('.name-worker').textContent = name;
+        document.querySelector('.lastName-worker').textContent = lastName;
+        document.querySelector('.email-worker').textContent = email;
+        document.querySelector('.phoneNumber-worker').textContent = phoneNumber;
+        document.querySelector('.identification-number-worker').textContent = idNumber;
+        document.querySelector('.profile-worker').textContent = profile;
+    </script>
+</body>
+</html>
