@@ -26,6 +26,7 @@
         const lastName = localStorage.getItem('Last Name');
         const email = localStorage.getItem('Email');
         const phoneNumber = localStorage.getItem('Phone Number');
+        const typeId = localStorage.getItem('Selected Id');
         const idNumber = localStorage.getItem('Id Number');
         const profile = localStorage.getItem('Description');
 
@@ -34,6 +35,7 @@
         document.querySelector('.lastName-worker').textContent = lastName;
         document.querySelector('.email-worker').textContent = email;
         document.querySelector('.phoneNumber-worker').textContent = phoneNumber;
+        document.querySelector('.identification-worker').textContent = typeId;
         document.querySelector('.identification-number-worker').textContent = idNumber;
         document.querySelector('.profile-worker').textContent = profile;
     </script>

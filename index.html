@@ -57,6 +57,7 @@
         const last_name = document.querySelector('.lastname-input');
         const email = document.querySelector('.email-input');
         const phone = document.querySelector('.phone-input');
+        const typeId = document.querySelector('.selector');
         const id_number = document.querySelector('.number-input');
         const profile_description = document.querySelector('.profile-input');
         
@@ -67,6 +68,7 @@
             const lastnameValue = last_name.value;
             const emailValue = email.value;
             const phoneValue = phone.value;
+            const selectedOptionValue = typeId.value;
             const idNumberValue = id_number.value;
             const descriptionValue = profile_description.value;
 
@@ -75,6 +77,7 @@
             localStorage.setItem('Last Name', lastnameValue); 
             localStorage.setItem('Email', emailValue); 
             localStorage.setItem('Phone Number', phoneValue); 
+            localStorage.setItem('Selected Id', selectedOptionValue);
             localStorage.setItem('Id Number', idNumberValue); 
             localStorage.setItem('Description', descriptionValue); 
 
